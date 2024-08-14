@@ -29,8 +29,8 @@ const Navbar = () => {
   },[]);
 
   return (
-    <nav className={`z-50 w-full  fixed  ${isScrolling ? 'text-black  backdrop-blur-md shadow-xl' : 'text-white'}`}>
-      <div className="flex items-center justify-between md:justify-evenly px-7 py-5 mx-auto">
+    <nav className={`z-40 w-full  fixed ${isScrolling ? 'text-black  backdrop-blur-md shadow-xl ' : 'text-white'} `}>
+      <div className={`flex items-center justify-between md:justify-evenly px-7 py-5 mx-auto `}>
         <div>
           <h1 className="font-black text-4xl cursor-pointer">Mystelith</h1>
         </div>
@@ -77,15 +77,15 @@ const Navbar = () => {
           <CgProfile size={30} />
         </div>
 
-        <div className="lg:hidden">
+        <div className="lg:hidden z-50">
           {modalOpen ? (
             <IoCloseSharp
-              className="text-3xl text-white cursor-pointer"
+              className={`text-3xl  cursor-pointer ${isScrolling ? 'text-black' : 'text-white'}`}
               onClick={toggleModal}
             />
           ) : (
             <BsList
-              className="text-3xl text-white cursor-pointer"
+              className={`text-3xl  cursor-pointer ${isScrolling ? 'text-black' : 'text-white'}`}
               onClick={toggleModal}
             />
           )}
@@ -93,7 +93,7 @@ const Navbar = () => {
       </div>
 
       {modalOpen && (
-        <ul className="lg:hidden flex flex-col gap-6 -mt-20 justify-center items-center font-bold text-3xl [&>li]:cursor-pointer h-dvh bg-black backdrop-blur-xl ">
+        <ul className="lg:hidden flex flex-col gap-6 -mt-20 justify-center items-center font-bold text-3xl [&>li]:cursor-pointer h-dvh  backdrop-blur-xl ">
           <li>
             <Link
               to="Home"

@@ -1,11 +1,8 @@
-import MainLayout from "./Layout/MainLayout"
-import HomePages from "./Pages/HomePages"
+import RouterApp from "./Routes/Routes"
 
 function App() {
   return (
-    <MainLayout>
-      <HomePages/>
-    </MainLayout>
+    <RouterApp/>
   )
 }
 

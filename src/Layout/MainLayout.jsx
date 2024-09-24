@@ -4,7 +4,7 @@ const MainLayout = ({ children }) => {
   return (
     <div className="flex flex-col gap-10">
       <Navbar />
-      <main>{children}</main>
+      <main >{children}</main>
     </div>
   );
 };

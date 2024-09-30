@@ -18,9 +18,9 @@ function RouterApp() {
         <Route 
           path="/detail/:id" 
           element={
-          <MainLayout>
+          <>
             <DetailArticle />
-          </MainLayout>
+          </>
           } 
         />
       </Routes>

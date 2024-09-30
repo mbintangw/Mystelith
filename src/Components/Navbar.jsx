@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-scroll";
 import { BsList } from "react-icons/bs";
 import { IoCloseSharp } from "react-icons/io5";
-import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -72,10 +71,6 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-
-        <div className="cursor-pointer">
-          <CgProfile size={30} />
-        </div>
 
         <div className="lg:hidden z-50">
           {modalOpen ? (
